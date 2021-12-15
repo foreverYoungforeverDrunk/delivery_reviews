@@ -127,3 +127,17 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+#Pycharm
+.idea/
+bin
+include
+lib
+lib64
+
+**/migrations/**
+!**/migrations
+!**/migrations/__init__.py
+*backend/*/migrations/*
+!*backend/*/migrations
+!*backend/*/migrations/__init__.py
