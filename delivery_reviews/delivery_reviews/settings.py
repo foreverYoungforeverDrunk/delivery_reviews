@@ -1,11 +1,13 @@
-
-
 BOT_NAME = 'delivery_reviews'
 
 SPIDER_MODULES = ['delivery_reviews.spiders']
 NEWSPIDER_MODULE = 'delivery_reviews.spiders'
 FEED_EXPORT_ENCODING = 'utf-8'
 
+MONGODB_SERVER = "localhost"
+MONGODB_PORT = 27017
+MONGODB_DB = "delivery"
+MONGODB_COLLECTION = "reviews"
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'delivery_reviews (+http://www.yourdomain.com)'
@@ -56,9 +58,10 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'delivery_reviews.pipelines.DeliveryReviewsPipeline': 300,
-#}
+
+ITEM_PIPELINES = {
+    'delivery_reviews.pipelines.DeliveryReviewsPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
